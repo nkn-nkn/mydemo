@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Placement Portal</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/static/css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/static/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/static/css/student.css" rel="stylesheet" type="text/css" media="all" />
+
+<script src="/static/js/jquery-3.0.0.js"></script>
+<script src="/static/js/login.js"></script>
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<style>
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #2560ac;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 70%;
+  padding: 10px;
+  width: 120px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+input[type=password], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+	font-size: 60%;
+}
+p
+{
+font-size: 60%;
+color: red;
+}
+</style>
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+        	<a href = "http://www.iet.dauniv.ac.in/"><img src="/static/logo.png"; width="150" height="150"/></a>
+			<h2><a style = "font-size:120%";>Training &amp; Placement</a></h2>
+			<h2><a>Institute of Engineering and Technology, DAVV</a></h2>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="/" accesskey="1" title="">Home</a></li>
+				<li class="active"><a href="#" accesskey="2" title="">LOGIN</a></li>
+				<li><a href="../../companies" accesskey="4" title="">Companies</a></li>
+				<li><a href="../../about_us/" accesskey="3" title="">About Us</a></li>
+				<li><a href="../../contact_us/" accesskey="5" title="">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrapper">
+	<div id="welcome" class="container">
+		<form action="" method="POST"> {% csrf_token %}
+
+        <center><input type="text" name="inputRoll" id="inputRoll" class="form-control" placeholder="Enrollment No." required autofocus>
+        <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required><br>
+        <button id="btnLogIn" class="btn btn-lg btn-primary btn-block" type="button">Log In</button></center>
+      </form>
+	</div>
+</div>
+<script>
+document.getElementById("inputPassword")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+        document.getElementById("btnLogIn").click();
+    }
+});
+</script>
+<div id="footer">
+	<div class="container">
+		<div class="fbox1">
+		<span class="icon icon-map-marker"></span>
+			<span>Khandwa Road , Indore ,
+			<br />Madhya Pradesh-452017,INDIA</span>
+		</div>
+		<div class="fbox1">
+			<span class="icon icon-phone"></span>
+			<span>
+				Telephone:  91-731-2462311, 2366800,
+         					2361116, 2361117 (t)
+         					91-731-2764385 (f)
+			</span>
+		</div>
+		<div class="fbox1">
+			<span class="icon icon-envelope"></span>
+			<span>webmaster@ietdavv.edu.in</span>
+		</div>
+	</div>
+</div>
+<div id="copyright">
+	<p>&copy; Untitled. All rights reserved. | Designed by <a>KUBER,DEVESH &amp; VIKRANT</a>.</p>
+	<ul class="contact">
+		<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+		<li><a href="#" class="icon icon-facebook"><span></span></a></li>
+		<li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
+		<li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
+		<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
+	</ul>
+</div>
+</body>
+</html>

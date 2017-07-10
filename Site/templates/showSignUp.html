@@ -1,0 +1,205 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/static/css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/static/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/static/css/student.css" rel="stylesheet" type="text/css" media="all" />
+
+<script src="/static/js/jquery-3.0.0.js"></script>
+<script src="/static/js/signUp.js"></script>
+
+
+
+<style>
+input[type=text], select {
+    width: 85%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=date], select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=email], select {
+    width: 85%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #2560ac;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 70%;
+  padding: 10px;
+  width: 120px;
+  cursor: pointer;
+  margin: 12px;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+input[type=password], select {
+    width: 85%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+label {
+    font-size: 80%;
+}
+p
+{
+font-size: 60%;
+}
+</style><!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+        	<a href = "http://www.iet.dauniv.ac.in/"><img src="/static/logo.png"; width="150" height="150"/></a>
+			<h2><a style = "font-size:120%";>Training &amp; Placement</a></h2>
+            <h2><a>Institute of Engineering and Technology, DAVV</a></h2>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="/" accesskey="1" title="">Home</a></li>
+				<li class="active"><a href="#" accesskey="2" title="">Registration</a></li>
+                <li><a href="../../companies" accesskey="4" title="">Companies</a></li>
+                <li><a href="../../about_us" accesskey="3" title="">About Us</a></li>
+				<li><a href="../../contact_us" accesskey="5" title="">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrapper">
+	<div id="welcome" class="container">
+
+	<form method="POST" action=""> {% csrf_token %}
+        <table>
+        	<tr>
+               <td><label for="inputFName" class="sr-only"> First Name</label>
+        	       <input type="text" id="inputFName" class="form-control" placeholder="First Name" required autofocus></td>
+        	   <td><label for="inputMName" class="sr-only"> Middle Name</label>
+        	       <input type="text" id="inputMName" class="form-control" placeholder="Middle Name" autofocus></td>
+        	   <td><label for="inputLName" class="sr-only"> Last Name</label>
+        	       <input type="text" id="inputLName" class="form-control" placeholder="Last Name" required autofocus></td>
+            </tr>
+        	<tr>
+                <td><label for="inputRoll" class="sr-only">Enrollment No.</label>
+                    <input type="text" id="inputRoll" class="form-control" placeholder="Ex: DE13xxx" required autofocus></td>
+                <td><label for="inputMobile" class="sr-only">Mobile No.</label>
+                    <input type="text" id="inputMobile" class="form-control" placeholder="----"></td>
+            </tr>
+        </table>
+        <table>
+            <tr><td><label for="inputDOB">Date Of Birth:</label>
+                    <input id="inputDOB" type="date" name="inputDOB" value="{{ dob }}" required></td>
+                <td><label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required autofocus></td>
+            </tr>
+        </table>
+        <table>
+        	<tr><label for="inputBranch" class="sr-only">Branch. :</label>
+        	<input type="radio" class="form-control"  name="inputBranch" value="CS"><a style = "font-size:70%;">CS </a>
+        	<input type="radio" class="form-control"  name="inputBranch" value="IT"><a style = "font-size:70%;">IT </a>
+        	<input type="radio" class="form-control"  name="inputBranch" value="Mech"><a style = "font-size:70%;">Mech </a>
+        	<input type="radio" class="form-control"  name="inputBranch" value="EI"><a style = "font-size:70%;">E&amp;I </a>
+        	<input type="radio" class="form-control"  name="inputBranch" value="ETC"><a style = "font-size:70%;">E&amp;TC </a>
+        	<input type="radio" class="form-control"  name="inputBranch" value="Civ"><a style = "font-size:70%;">Civil</a></tr>
+            <tr>
+                <label for="inputGender" class="sr-only">Gender :</label>
+                <input type="radio" class="form-control"  name="inputGender" value="M"><a style = "font-size:70%;">Male </a>
+                <input type="radio" class="form-control"  name="inputGender" value="F"><a style = "font-size:70%;">Female </a>
+                <input type="radio" class="form-control"  name="inputGender" value="O"><a style = "font-size:70%;">Other</a>
+            </tr>
+        </table>
+            <table>
+            <tr>
+                <td><label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required></td>
+                <td><label for="inputCPassword" class="sr-only">Confirm Password</label>
+                    <input type="password" id="inputCPassword" class="form-control" placeholder="Password" required></td>
+            </tr>
+        </table>
+
+        <center><button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button"> Sign up</button></center>
+
+		</form>
+	</div>
+</div>
+<div id="sidemenu" class="container">
+
+</div>
+<div id="footer">
+	<div class="container">
+		<div class="fbox1">
+		<span class="icon icon-map-marker"></span>
+			<span>Khandwa Road , Indore ,
+			<br />Madhya Pradesh-452017,INDIA</span>
+		</div>
+		<div class="fbox1">
+			<span class="icon icon-phone"></span>
+			<span>
+				Telephone:  91-731-2462311, 2366800,
+         					2361116, 2361117 (t)
+         					91-731-2764385 (f)
+			</span>
+		</div>
+		<div class="fbox1">
+			<span class="icon icon-envelope"></span>
+			<span>webmaster@ietdavv.edu.in</span>
+		</div>
+	</div>
+</div>
+<div id="copyright">
+	<p>&copy; Untitled. All rights reserved. | Designed by <a>NITIN K. NAYAN &amp; RUTUPARN SATPUTE</a>.</p>
+	<ul class="contact">
+		<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+		<li><a href="#" class="icon icon-facebook"><span>Facebook</span></a></li>
+		<li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
+		<li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
+		<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
+	</ul>
+</div>
+</body>
+</html>
