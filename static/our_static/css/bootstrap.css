@@ -1,0 +1,141 @@
+/*!
+ * Bootstrap v3.3.0 (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+.panel-group .panel {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  border: none;
+  width: 50%;
+  margin-left: 25%;
+  border:#2056ac 1px solid;
+}
+.panel-default > .panel-heading {
+  padding: 0;
+  outline: none;
+  border: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border: 1px solid #f0f0f0;
+  border-top: none;
+  background-color: #FCFCFC;
+  
+}
+.panel-heading a {
+  font-weight: 400;
+  padding: 12px 35px 12px 15px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #2056ac;
+  color: #FFFFFF;
+  position: relative;
+  text-decoration: none;
+  border: #ECECEC 1px solid;
+}
+.panel-heading a.collapsed {
+  color: #333333;
+  background-color: #C7C7C7;
+}
+.panel-heading a:after {
+  
+  position: absolute;
+  right: 15px;
+  font-size: 14px;
+  font-weight: 300;
+  top: 50%;
+  line-height: 1;
+  margin-top: -7px;
+}
+}
+.panel-heading a:hover {
+  text-decoration: none;
+  background-color: #2056ac;
+  color: #FFFFFF;
+}
+.panel-title a i {
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.collapse {
+  display: none;
+  visibility: hidden;
+}
+.collapse.in {
+  display: block;
+  visibility: visible;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .35s;
+       -o-transition-duration: .35s;
+          transition-duration: .35s;
+  -webkit-transition-property: height, visibility;
+       -o-transition-property: height, visibility;
+          transition-property: height, visibility;
+}
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+.panel-body {
+  padding: 15px;
+}
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel-heading > .dropdown .dropdown-toggle {
+  color: inherit;
+}
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: inherit;
+}
+.panel-group {
+  margin-bottom: 20px;
+}
+.panel-group .panel {
+  margin-bottom: 0;
+  border-radius: 4px;
+}
+.panel-group .panel + .panel {
+  margin-top: 5px;
+}
+.panel-group .panel-heading {
+  border-bottom: 0;
+}
+/*# sourceMappingURL=bootstrap.css.map */
