@@ -25,7 +25,7 @@ SECRET_KEY = 'kp60&-i%)ye3u1(cdi356s_&lgvljn%-@tw_*jyepppv*dp+g&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.137.1']
+ALLOWED_HOSTS = []
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'placementportaliet@gmail.com'
